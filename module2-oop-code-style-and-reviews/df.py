@@ -1,6 +1,8 @@
 # inherit
 # my_lambdata/assignment.py
-import pandas=]]
+import pandas
+
+
 class MyFrame(pandas.DataFrame):
     def inspect_data(self):
         print(self.head())
