@@ -3,47 +3,37 @@
 Define a Pet class with their attributes
 """
 
-   """
-    Setting up the class attribute, same for all instances
-    """
+
 
 
 class Pet(object):
-    eats = 'food'
+    
 
-    def __init__(self, name):
-    """
-    Define the init method
-    """
+    def __init__(self, name, speaks):
+   
        self.name = name
+       self.speaks = speaks
 
-    """
-    Instance Attribute, different for each instance
-    """
+    def full_name(self):
+        return f"{self.name}"
+
+   
 
     def speaks(self):
-        print(self.name + ' speaks')
+        print({self.name} + ' speaks')
+        
 
-    """
-    Define a method for speaking behavior
-    """
+if __name__ == "__main__":
+    
+    pet = Pet(name="Dog", speaks="Woof Woof")
+    print(pet.full_name)
+    
 
-    def eat(self, meal):
-    """
-    Define a method for eating behavior
-    """
-       if meal == self.eats:
-            print('Bark!')
-        else:
-            print('GRR!')
 
-    """
-    Create an instance of Class
-    """
 
-my_pet = Pet('Dog')
-   """
-    Calling the method on the new instance
-    """
-my_pet.speak()
-my_pet.eat('food')
+
+    
+
+ 
+
+
